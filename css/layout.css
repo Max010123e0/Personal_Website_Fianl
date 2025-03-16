@@ -84,6 +84,13 @@ table {
   gap: var(--spacing-md, 1.5rem);
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
@@ -100,6 +107,10 @@ table {
   }
 
   #Profile {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 }
