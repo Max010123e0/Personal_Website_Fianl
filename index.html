@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewPort" content = "width = device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+        <title>Max Kim</title>
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/DarkTheme.css">
+    </head>
+    <body>
+        <header id="home">
+            <h1>Max Kim</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#Profile">Profile</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article id="Profile">
+                <h2>Profile</h2>
+                <figure>
+                    <picture>
+                        <source 
+                            srcset="Images/Face_Image.jpg"
+                            sizes="(max-width: 768px) 200px,
+                                   (max-width: 1024px) 400px,
+                                   800px"
+                            type="image/webp">
+                        <img src="Images/Face_Image.jpg" 
+                             alt="Max Kim"
+                             width="400"
+                             height="400"
+                             loading="lazy"
+                             style="object-fit: cover; object-position: center;">
+                    </picture>
+                    <figcaption>Max Kim</figcaption>
+                </figure>
+                <section>
+                    <hgroup>
+                        <h3>Introduction</h3>
+                        <p>My name is <strong>Max Kim</strong>. I am a student at the <em>University of California, San Diego</em>, majoring in <i>Computer Science</i>.</p>
+                    </hgroup>
+                    <aside>
+                        Currently passionate about <b>Parallel Programming</b> and <b>Web Development</b>    
+                    </aside>
+                </section>
+
+                <article id="Contact">
+                    <a href="mailto:gyk002@ucsd.edu">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail">
+                    </a>
+                    <a href="https://github.com/Max010123e0" target="_blank" rel="noopener noreferrer">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/max-kim-786738180/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn">
+                    </a>
+                    <address>
+                        <a href="tel:+8582146689">+1 (858) 214-6689</a>
+                    </address>
+
+                    <h2>Contact Me</h2>
+                    <form action="https://httpbin.org/post" method="post" id="contact-form" class="contact-form">
+                        <fieldset>
+                            <label for="fullname">Full Name<span class="required">*</span>:</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Your Full Name" required autofocus> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="email">Email<span class="required">*</span>:</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="comments">Comments<span class="required">*</span>:</label>
+                            <textarea id="comments" name="comments" rows="7" required 
+                            minlength="10" maxlength="70" required placeholder="Write your message here..."></textarea> <br>
+                        </fieldset>
+
+                        <input type="hidden" name="possible_bot" value="true">
+
+                        <button type="submit">Submit</button>
+                        <fieldset>
+                            <output id="error-output" class="error" for="fullname email comments">Error</output>
+                            <output id="info-output" class="info" for="fullname email comments">Valid</output>
+                        </fieldset>
+                    </form>
+                </article>
+
+            </article>
+            <hr >
+            <article id="Education">
+                <h2>Education</h2>
+                <table>
+                    <caption>Academic History</caption>
+                    <colgroup>
+                        <col style="width: 20%">
+                        <col style="width: 40%">
+                        <col style="width: 40%">
+                    </colgroup>
+                    <tr>
+                        <th>Year</th>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                    </tr>
+                    <tr>
+                        <td>2021-2022, 2025~</td>
+                        <td>BS in Computer Science</td>
+                        <td>University of California - San Diego</td>
+                    </tr>
+                    <tr>
+                        <td>2019-2021</td>
+                        <td>Associate Degree in Computer Science</td>
+                        <td>Diablo Valley College</td>
+                    </tr>
+                    <tr>
+                        <td>2016-2019</td>
+                        <td>Graduated with a strong foundation in mathematics and computer science.</td>
+                        <td>Sangsan High School</td>
+                    </tr>
+                </table>
+                <section id="skills">
+                    <h3>Skills</h3>
+                    <p><strong>Programming Languages:</strong></p>
+                    <ol>
+                        <li><skill-proficiency skill-level="master">C++</skill-proficiency></li>
+                        <li>
+                            <skill-proficiency skill-level="master"><abbr>HTML</abbr></skill-proficiency> 
+                            <skill-proficiency skill-level="master"><abbr>CSS</abbr></skill-proficiency>
+                            <skill-proficiency skill-level="master">JavaScript</skill-proficiency>
+                        </li>
+                        <li><skill-proficiency skill-level="proficient">Python</skill-proficiency>, <skill-proficiency skill-level="intermediate">Java</skill-proficiency></li>
+                    </ol>
+                    <p><strong>Tools & Technologies:</strong></p>
+                    <ul>
+                        <li><skill-proficiency skill-level="proficient">Android Studio</skill-proficiency></li>
+                        <li><span class="parallel programming"><skill-proficiency skill-level="master">OpenCl</skill-proficiency>, <skill-proficiency skill-level="intermediate">CUDA</skill-proficiency></span></li>
+                        <li><skill-proficiency skill-level="master">Linux</skill-proficiency></li>
+                    </ul>
+                    <p><strong>Core Concepts:</strong> Algorithm Design, Data Structures, Parallel Computing, Android/Web Development</p>
+                </section>
+            </article>
+            <hr >
+            <article id="Experience">
+                <h2>Experience</h2>
+                <dl>
+                    <dt><strong>Mandatory Military Service – Republic of Korea Army (2022–2024)</strong></dt>
+                    <dd>Fulfilled two years of mandatory military service, demonstrating discipline, resilience, and adaptability.</dd>
+
+                    <dt><strong>Intern, Computer Systems and Platforms Laboratory – Seoul National University, Korea (June–September 2020)</strong></dt>
+                    <dd>Evaluated performance of OpenCL applications on CPU/GPU cores of integrated processors.
+                        Gained hands-on experience with Linux servers, CPU/GPU architectures, and OpenCL.</dd>
+                </dl>
+                <section id="projects">
+                    <h2>Projects</h2>
+            
+                    <h3>ZooSeeker Application</h3>
+                    <p>A mobile application that provides optimized routes for zoo visitors. <a href="https://github.com/CSE-110-Spring-2022/zooseeker-cse-110-team-3" target="_blank">GitHub Repo</a></p>
+            
+                    <h3>Personal Website</h3>
+                    <p>Currently building a personal portfolio website to showcase skills, experiences, and projects. <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code> are the main technologies used.</p>
+            
+                    <figure>
+                        <img src="Images/Zooseeker.png" alt="ZooSeeker App Screenshot" width="400">
+                        <figcaption>ZooSeeker App Interface</figcaption>
+                    </figure>
+                </section>
+            </article>
+            <hr >
+
+        </main>
+        <script src="JavaScript/DarkTheme.js"></script>
+        <script src="script.js"></script>
+        <script src="JavaScript/form_validation.js"></script>
+        <noscript>
+            <p>This website requires JavaScript to function properly.</p>
+        </noscript>
+        <footer>
+            <a class="scroll" title="Back To Top" href="#home">Back To Top</a>
+        </footer>
+    </body>
+
+
+</html>

@@ -1,0 +1,59 @@
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+.contact-form {
+    background-color: var(--form-bg);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--input-focus-border);
+}
+
+.contact-form button {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+}
+
+.no-js .theme-toggle {
+    display: none;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with HTML Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        fieldset {
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid white;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: green;
+        }
+        
+        /* Validation styling */
+        input:valid,
+        textarea:valid {
+            border: 2px solid green;
+        }
+        
+        input:invalid,
+        textarea:invalid {
+            border: 2px solid red;
+        }
+        
+        input:placeholder-shown,
+        textarea:placeholder-shown {
+            border-color: #ddd;
+            background-color: white;
+        }
+
+        .form-note {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Me</h1>
+    <form action="https://httpbin.org/post" method="post" id="contact-form" class="contact-form">
+        <fieldset>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Your Full Name" 
+                   required autofocus pattern="[A-Za-z\s]{2,40}" title="Name must be between 2-40 characters and contain only letters">
+            <p class="form-note">Please enter your full name (2-40 characters, letters only)</p>
+        </fieldset>
+
+        <fieldset>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" 
+                   required title="Please enter a valid email address">
+            <p class="form-note">Please enter a valid email address</p>
+        </fieldset>
+
+        <fieldset>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="7" required 
+                      minlength="10" maxlength="400" placeholder="Write your message here...(10-400 characters)"
+                      title="Comment must be between 10-400 characters"></textarea>
+            <p class="form-note">Please enter your message (10-400 characters)</p>
+        </fieldset>
+
+        <input type="hidden" name="possible_bot" value="true">
+
+        <button type="submit">Submit</button>
+    </form>
+    
+    <footer>
+        <p><a href="index.html">Return to main page</a></p>
+    </footer>
+</body>
+</html>

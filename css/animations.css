@@ -1,0 +1,55 @@
+@keyframes fadeIn {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  #Profile > * {
+    opacity: 0;
+    animation: fadeIn 0.8s var(--transition-normal, ease-out) forwards;
+  }
+  
+  #Profile figure { 
+    animation-delay: 0.2s; 
+  }
+  
+  #Profile section { 
+    animation-delay: 0.4s; 
+  }
+  
+  #Contact { 
+    animation-delay: 0.6s; 
+  }
+  
+  @keyframes skillBar {
+    from { 
+      width: 0; 
+    }
+    to { 
+      width: var(--skill-width, 100%); 
+    }
+  }
+
+
+  @media (hover: hover) {
+    skill-proficiency:hover::after {
+      filter: brightness(1.1);
+      transition: filter var(--transition-fast, 0.2s);
+    }
+  }

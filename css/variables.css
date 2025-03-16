@@ -1,0 +1,68 @@
+:root {
+
+  --primary-color: color(display-p3 0.176 0.204 0.212) #2d3436;
+  --secondary-color: color(display-p3 0.035 0.518 0.890) #0984e3;
+  --text-color: color-mix(in srgb, var(--primary-color) 90%, white);
+  --background-color: #a1c1d1;
+  --accent-color: color-mix(in srgb, var(--secondary-color) 80%, white);
+
+   --border-color: #464646;
+   --bg-secondary: color-mix(in srgb, var(--background-color, white) 95%, var(--primary-color, #2d3436));
+   --bg-alternate: color-mix(in srgb, var(--background-color, white) 98%, var(--primary-color, #2d3436));
+   --bg-hover: color-mix(in srgb, var(--secondary-color, #0984e3) 5%, var(--background-color, white));
+  
+
+  --spacing-xs: clamp(0.5rem, 1vw, 0.75rem);
+  --spacing-sm: clamp(1rem, 2vw, 1.5rem);
+  --spacing-md: clamp(1.5rem, 3vw, 2.25rem);
+  --spacing-lg: clamp(2rem, 4vw, 3rem);
+  
+
+  --max-width: min(1200px, 90vw);
+  --header-height: clamp(4rem, 10vh, 6rem);
+  
+
+  --font-size-base: clamp(1rem, 1.5vw, 1.125rem);
+  --font-size-h1: clamp(2.5rem, 5vw, 4rem);
+  --font-size-h2: clamp(2rem, 4vw, 3rem);
+  --font-size-h3: clamp(1.5rem, 3vw, 2rem);
+  --line-height: 1.5;
+  
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+ 
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  
+    --bg-color: white;
+    --text-color: black;
+    --heading-color: black;
+    --link-color: blue;
+    --link-hover-color: navy;
+    --border-color: gray;
+    --card-bg: whitesmoke;
+    --form-bg: whitesmoke;
+    --input-bg: white;
+    --input-border: gray;
+    --input-focus-border: blue;
+    --btn-bg: blue;
+    --btn-color: white;
+}
+
+.dark-theme {
+    --bg-color: black;
+    --text-color: white;
+    --heading-color: white;
+    --link-color: lightblue;
+    --link-hover-color: skyblue;
+    --border-color: gray;
+    --card-bg: darkgray;
+    --form-bg: darkgray;
+    --input-bg: gray;
+    --input-border: silver;
+    --input-focus-border: lightblue;
+    --btn-bg: lightblue;
+    --btn-color: black;
+}
