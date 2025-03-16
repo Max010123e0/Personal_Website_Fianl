@@ -161,20 +161,25 @@
                     <dd>Evaluated performance of OpenCL applications on CPU/GPU cores of integrated processors.
                         Gained hands-on experience with Linux servers, CPU/GPU architectures, and OpenCL.</dd>
                 </dl>
-                <section id="projects">
-                    <h2>Projects</h2>
-            
-                    <h3>ZooSeeker Application</h3>
-                    <p>A mobile application that provides optimized routes for zoo visitors. <a href="https://github.com/CSE-110-Spring-2022/zooseeker-cse-110-team-3" target="_blank">GitHub Repo</a></p>
-            
-                    <h3>Personal Website</h3>
-                    <p>Currently building a personal portfolio website to showcase skills, experiences, and projects. <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code> are the main technologies used.</p>
-            
-                    <figure>
-                        <img src="Images/Zooseeker.png" alt="ZooSeeker App Screenshot" width="400">
-                        <figcaption>ZooSeeker App Interface</figcaption>
-                    </figure>
-                </section>
+            <section id="projects">
+                <project-card
+                    title="ZooSeeker Application"
+                    image="Images/Zooseeker.png"
+                    alt="ZooSeeker App Interface"
+                    description="A mobile application that provides optimized routes for zoo visitors, helping them navigate through exhibits efficiently."
+                    technologies="Java,Android,Graph Algorithms"
+                    link="https://github.com/CSE-110-Spring-2022/zooseeker-cse-110-team-3">
+                </project-card>
+
+                <project-card
+                    title="Personal Portfolio Website"
+                    image="Images/portfolio.png"
+                    alt="Portfolio website screenshot"
+                    description="A responsive portfolio website built using modern web technologies and best practices for accessibility and performance."
+                    technologies="HTML,CSS,JavaScript"
+                    link="#portfolio">
+                </project-card>
+            </section>
             </article>
             <hr >
 
@@ -182,6 +187,7 @@
         <script src="JavaScript/DarkTheme.js"></script>
         <script src="script.js"></script>
         <script src="JavaScript/form_validation.js"></script>
+        <script src="JavaScript/ProjectCard.js"></script>
         <noscript>
             <p>This website requires JavaScript to function properly.</p>
         </noscript>
