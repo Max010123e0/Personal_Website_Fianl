@@ -102,36 +102,11 @@ table {
     margin: 2rem 0;
 }
 
-.load-btn {
-    padding: 0.75rem 1.5rem;
-    background-color: var(--accent-color, blue);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.load-btn:hover {
-    background-color: var(--accent-color-hover, darkblue);
-    transform: translateY(-2px);
-}
-
-.load-btn:active {
-    transform: translateY(1px);
-}
-
-.load-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
 
 .placeholder-message {
     text-align: center;
     padding: 2rem;
     color: var(--text-color);
-    opacity: 0.7;
 }
 
 .error-message {
